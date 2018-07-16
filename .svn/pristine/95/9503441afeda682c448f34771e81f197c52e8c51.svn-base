@@ -1,0 +1,58 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<base href="<%=basePath%>">
+		<meta charset="utf-8" />
+		<meta name="keywords" content="江理购，二手货交易，江理"/>
+		<title>江理购首页</title>
+		<link rel="stylesheet" href="css/Reset.css" />
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div class="container">
+	<!--头部导航-->
+	<header>
+		<a class="a1" href="javascript:void(0)">请登录</a>
+		<a class="a2" href="javascript:void(0)">免费注册</a>	
+		<a class="a3" href="javascript:void(0)">首页</a>	
+		<ul class="ul1">
+			<li class="li1">我的江理GO
+			<ul class="ul2">
+				<li><a href="javascript:void(0)">成功订单</a><li>
+				<li><a href="javascript:void(0)">我的足迹</a><li>
+			</ul>
+			</li>
+			<li class="li2">收藏夹
+				<ul class="ul2">
+					<li><a href="javascript:void(0)">收藏的宝贝</a><li>
+				</ul>
+			</li>
+			<li class="li3">卖家中心
+				<ul class="ul2">
+					<li><a href="javascript:void(0)">免费开店</a><li>
+				    <li><a href="javascript:void(0)">已卖出的宝贝</a><li>
+					<li><a href="javascript:void(0)">出售中的宝贝</a><li>
+				</ul>
+			</li>
+			<li class="li4">订单
+			<ul class="ul2">
+				<li><a href="javascript:void(0)">待处理的订单</a><li>
+			</ul>
+			</li>
+			<li class="li5">联系客服
+			<ul class="ul2">
+			<li><a href="javascript:void(0)">联系客服</a><li>
+			</ul>
+			</li>
+		</ul>
+	</header>
+	
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js" ></script>
+	<script type="text/javascript" src="js/indexHeader.js" ></script>
+	</body>
+</html>

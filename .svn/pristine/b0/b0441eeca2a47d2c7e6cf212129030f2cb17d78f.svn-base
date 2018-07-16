@@ -1,0 +1,18 @@
+package test_action;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import test_pojo.User;
+import test_service.Allservice;
+@Controller
+public class BaseAction {
+@Autowired
+private Allservice allservice;
+
+public void insert(User user) {
+	System.out.println("BaseAction");
+	allservice.insert(user);
+}
+
+}

@@ -1,0 +1,35 @@
+package test_interface;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.Results;
+import org.apache.ibatis.annotations.Select;
+
+import test_pojo.Member;
+
+
+public interface MemberMapper {
+	void insert(Member member);
+	void delete(int id);
+	void update(Member member);
+	/**
+	 * 
+	 * @param id
+	 * @return
+	 * @time 2017-4-5
+	 */
+	@Select("select username,gender,evaluate,telephone,email,state from member where id=#{id}")
+			@Results({
+				@Result(id=true,column="id",property="id"),
+				@Result(column="username",property="username"),
+				@Result(column="gender",property="gender"),
+				@Result(column="evaluate",property="evaluate"),
+				@Result(column="telephone",property="telephone"),
+				@Result(column="email",property="email"),
+				@Result(column="state",property="state")})	
+	Member selectByID(int id);
+	
+	List selectpage(final int begin,final int size);
+	void insertbyid(Member member);
+}

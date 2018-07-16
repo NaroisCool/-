@@ -1,0 +1,18 @@
+package test_service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import test_DAO.AllDao;
+import test_pojo.User;
+@Service
+public class Allservice {
+	
+@Autowired
+private Userservice userservice;
+
+public void insert(User user){
+	System.out.println("Allservice");
+	userservice.insert(user);
+}
+}

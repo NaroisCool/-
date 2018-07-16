@@ -1,0 +1,14 @@
+package test_interface;
+
+import java.util.List;
+
+import test_pojo.User;
+
+public interface UserMapper {
+void insert(User user);
+int delete(int id);
+int update(User user);
+User selectByID(User user);
+List<User> selectpage(final int begin,final int size);
+int insertbyid(User user);
+}

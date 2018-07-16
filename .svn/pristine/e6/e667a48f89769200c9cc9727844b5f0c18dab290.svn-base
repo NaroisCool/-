@@ -1,0 +1,19 @@
+package test_DAO;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import test_pojo.User;
+
+@Repository
+public class AllDao {
+	
+@Autowired
+private UserDao userDao;
+
+public void insert(User user) {
+	System.out.println("AllDAO");
+	userDao.insert(user);
+}
+
+}
